@@ -5,11 +5,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/picasso/aosp_picasso.mk \
-    $(LOCAL_DIR)/picasso_48m/aosp_picasso_48m.mk
+    $(LOCAL_DIR)/picasso/lineage_picasso.mk \
+    $(LOCAL_DIR)/picasso_48m/lineage_picasso_48m.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_picasso-userdebug \
-    aosp_picasso_48m-userdebug \
-    aosp_picasso-eng \
-    aosp_picasso_48m-eng
+    lineage_picasso-bp1a-user \
+    lineage_picasso_48m-bp1a-user \
+    lineage_picasso-bp1a-userdebug \
+    lineage_picasso_48m-bp1a-userdebug \
+    lineage_picasso-bp1a-eng \
+    lineage_picasso_48m-bp1a-eng

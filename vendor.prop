@@ -2,8 +2,6 @@
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
 aaudio.mmap_policy=1
-audio.offload.buffer.size.kb=32
-audio.offload.gapless.enabled=true
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
@@ -48,18 +46,18 @@ vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.voice.path.for.pcm.voip=true
 
+# Audio hardware
+ro.hardware.audio.primary=picasso
+
 # Bluetooth
 persist.vendor.qcom.bluetooth.soc=cherokee
 
-# Camera
-camera.disable_zsl_mode=true
-persist.camera.gyro.disable=0
-
-# CNE
-persist.vendor.cne.feature=1
-
 # Crypto
+ro.crypto.allow_encrypt_override=true
+ro.crypto.dm_default_key.options_format.version=2
 ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.volume.metadata.method=dm-default-key
+ro.crypto.volume.options=::v2
 
 # Display
 debug.egl.hw=1
@@ -67,7 +65,6 @@ debug.sf.enable_gl_backpressure=1
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
 debug.gralloc.enable_fb_ubwc=1
-persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=0
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
@@ -113,35 +110,31 @@ drm.service.enabled=true
 # Factory Reset Protection
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Fingerprint
+persist.vendor.fingerprint.type=side
+persist.vendor.fingerprint.sensor_location=1080|850|125|local:4630946687422888065,1080|850|125|local:4630946480857061761
+
 # Keystore
 ro.hardware.keystore_desede=true
 
 # Media
-debug.stagefright.ccodec=1
-debug.stagefright.omx_default_rank=0
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-media.stagefright.enable-aac=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
-media.stagefright.thumbnail.prefer_hw_codecs=true
+debug.stagefright.c2inputsurface=-1
+ro.odm.build.media_performance_class=30
+vendor.media.omx=0
+
+# NFC
+ro.camera.notify_nfc=1
+
+# OTG
+persist.sys.oem.otg_support=true
 
 # Netflix
 ro.netflix.bsp_rev=Q7250-19133-1
 
 # Netmgr
-persist.data.df.dev_name=rmnet_usb0
-persist.data.netmgrd.qos.enable=true
-persist.data.wda.enable=true
-persist.rmnet.data.enable=true
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 ro.vendor.use_data_netmgrd=true
-
-# NFC
-ro.nfc.port=I2C
 
 # Perf
 ro.vendor.perf-hal.ver=2.2
@@ -156,7 +149,6 @@ persist.vendor.qcomsysd.enabled=1
 persist.rcs.supported=0
 
 # RIL
-persist.radio.dynamic_sar=false
 persist.radio.multisim.config=dsds
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.atfwd.start=true
@@ -180,7 +172,6 @@ persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.redir_party_num=1
 persist.vendor.radio.sib16_support=1
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.telephony.default_cdma_sub=0
 ro.vendor.radio.5g=3
 telephony.lteOnCdmaDevice=1
@@ -189,5 +180,13 @@ telephony.lteOnCdmaDevice=1
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SM7250
 
-# Time
-persist.timed.enable=true
+# USB
+sys.usb.mtp.batchcancel=1
+vendor.usb.diag.func.name=diag
+vendor.usb.dpl.inst.name=dpl
+vendor.usb.qdss.inst.name=qdss
+vendor.usb.rmnet.func.name=gsi
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=gsi
+vendor.usb.use_ffs_mtp=1
+vendor.usb.use_gadget_hal=1

@@ -1,0 +1,3 @@
+# allow system_suspend to read sysfs directory
+allow system_suspend sysfs:file { getattr };
+allow system_suspend sysfs:dir { read };

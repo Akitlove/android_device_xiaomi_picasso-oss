@@ -97,3 +97,10 @@ service nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
+
+# Ril
+service vendor.imsrcsservice /vendor/bin/imsrcsd
+    class main
+    user radio
+    group radio vendor_qti_diag log inet wakelock
+    disabled

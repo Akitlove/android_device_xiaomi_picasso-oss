@@ -1,0 +1,1 @@
+allow crash_dump resourcecache_data_file:file { read open getattr };

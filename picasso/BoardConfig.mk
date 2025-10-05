@@ -4,4 +4,4 @@ include device/xiaomi/picasso/BoardConfigCommon.mk
 TARGET_OTA_ASSERT_DEVICE := picasso
 
 # Inherit from the proprietary version
-include vendor/xiaomi/picasso/BoardConfigVendor.mk
+include vendor/xiaomi/picasso/picasso/BoardConfigVendor.mk
