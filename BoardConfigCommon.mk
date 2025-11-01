@@ -48,9 +48,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_LINUX_KERNEL_VERSION := 4.19
-TARGET_KERNEL_CLANG_VERSION := r522817
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm7250
-TARGET_KERNEL_CONFIG := picasso_defconfig
+TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/xiaomi/picasso.config
 
 
 # Platform
