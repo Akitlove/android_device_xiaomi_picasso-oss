@@ -4,6 +4,7 @@ dontaudit {
   hal_sensors_default
   hal_graphics_composer_default
   rild
+  vendor_dpmd
   vendor_hal_imsrtp
   vendor_sensors_qti
 } vendor_diag_device:chr_file rw_file_perms;
@@ -12,9 +13,11 @@ dontaudit {
   rild
 } vendor_pd_locater_dbg_prop:file r_file_perms;
 
-dontaudit vendor_qtidataservices_app default_prop:file { read };
+
 dontaudit {
   rild
+  vendor_qtidataservices_app
+  hal_sensors_default
 } default_prop:file r_file_perms;
 dontaudit vendor_init fingerprint_data_file:dir { getattr };
 dontaudit vendor_init default_prop:property_service set;
