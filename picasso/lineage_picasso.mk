@@ -18,8 +18,34 @@ TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_SUPPORTS_QUICK_TAP := true
 
+# Lunch banner maintainer variable
+RISING_MAINTAINER="Akitlove"
+
+# Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer)
+# Set RISING_MAINTAINER for version control
+# (Optional if builder is setting properties via init_<device>.cpp)
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RisingChipset="Redmi K30 5G" \
+    RisingMaintainer="Akitlove"
+
+RISING_MAINTAINER := Akitlove
+
+# Disable/enable blur support, false by default
+TARGET_ENABLE_BLUR := true
+
+# Whether to ship aperture camera, false by default
+PRODUCT_NO_CAMERA := false
+
+# Whether to ship lawnchair launcher, false by default
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+# CORE build flags
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_picasso
+PRODUCT_NAME := lineage_picasso
 PRODUCT_DEVICE := picasso
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi K30 5G
