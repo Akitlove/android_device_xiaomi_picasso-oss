@@ -21,9 +21,9 @@
     <!-- Height of the status bar.
          Do not read this dimen directly. Use {@link SystemBarUtils#getStatusBarHeight} instead.
          -->
-    <dimen name="status_bar_height_default">109px</dimen>
+    <dimen name="status_bar_height">109px</dimen>
     <dimen name="status_bar_height_portrait">109px</dimen>
-    <!-- <dimen name="status_bar_height_landscape">125px</dimen> -->
+    <dimen name="status_bar_height_landscape">28dp</dimen>
 
    <!-- Radius of the software rounded corners at the top of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
