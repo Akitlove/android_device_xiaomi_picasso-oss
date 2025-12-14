@@ -6,6 +6,7 @@ dontaudit {
   rild
   vendor_dpmd
   vendor_hal_imsrtp
+  vendor_hal_rcsservice
   vendor_sensors_qti
 } vendor_diag_device:chr_file rw_file_perms;
 
@@ -21,3 +22,7 @@ dontaudit {
 } default_prop:file r_file_perms;
 dontaudit vendor_init fingerprint_data_file:dir { getattr };
 dontaudit vendor_init default_prop:property_service set;
+dontaudit system_server vendor_default_prop:file read;
+dontaudit vendor_hal_gnss_qti vendor_pd_locater_dbg_prop:file read;
+dontaudit hal_power_default hal_thermal_service:service_manager find;
+dontaudit vendor_hal_capabilityconfigstore_qti_default vendor_cap_configstore_dbg_prop:file read;
