@@ -117,6 +117,10 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 persist.vendor.fingerprint.type=side
 persist.vendor.fingerprint.sensor_location=1080|850|125|local:4630946687422888065,1080|850|125|local:4630946480857061761
 
+# HWUI
+debug.hwui.use_hint_manager=true
+debug.hwui.target_cpu_time_percent=30
+
 # Keystore
 ro.hardware.keystore_desede=true
 
