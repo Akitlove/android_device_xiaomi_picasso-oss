@@ -94,6 +94,7 @@ ro.surface_flinger.supports_background_blur=1
 vendor.display.enable_perf_hint_large_comp_cycle=1
 
 # Display (Phase Offsets)
+debug.sf.auto_latch_unsignaled=0
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
 debug.sf.high_fps_early_phase_offset_ns=-4000000
