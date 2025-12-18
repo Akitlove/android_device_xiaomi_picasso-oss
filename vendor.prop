@@ -122,6 +122,7 @@ debug.hwui.target_cpu_time_percent=30
 
 # Kernel idle
 ro.surface_flinger.support_kernel_idle_timer=true
+vendor.perf.framepacing.enable=1
 
 # Keystore
 ro.hardware.keystore_desede=true
