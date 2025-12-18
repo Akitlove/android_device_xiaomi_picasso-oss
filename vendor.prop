@@ -120,6 +120,9 @@ persist.vendor.fingerprint.sensor_location=1080|850|125|local:463094668742288806
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
+# Kernel idle
+ro.surface_flinger.support_kernel_idle_timer=true
+
 # Keystore
 ro.hardware.keystore_desede=true
 
