@@ -14,27 +14,21 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.popupcamera;
+package org.lineageos.settings.dirac;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
-import androidx.preference.PreferenceFragment;
+import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
-import org.lineageos.settings.R;
+public class DiracActivity extends CollapsingToolbarBaseActivity {
 
-public class PopupCameraSettingsFragment
-        extends PreferenceFragment implements OnPreferenceChangeListener {
+    private static final String TAG_DIRAC = "dirac";
 
     @Override
-    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        addPreferencesFromResource(R.xml.popup_settings);
-    }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return false;
+        getFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+                new DiracSettingsFragment(), TAG_DIRAC).commit();
     }
 }
