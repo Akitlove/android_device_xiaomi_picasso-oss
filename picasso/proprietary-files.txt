@@ -350,6 +350,13 @@ vendor/lib64/camera/com.qti.tuned.picasso_sunny_rear_depth_gc02m1_mono.bin
 vendor/lib64/camera/com.qti.tuned.picasso_sunny_v2_wide_imx686.bin
 vendor/lib64/camera/com.qti.tuned.picasso_sunny_wide_imx686.bin
 
+# Camera - from picasso_48m MIUI V13.0.4.0
+vendor/lib64/camera/com.qti.sensor.picasso_wide_ov48b2q.so|0da9cd53ea81941ab4a768b1b833fe82ba47fcf5
+vendor/lib64/camera/com.qti.sensormodule.picasso_sunny_wide_ov48b2q.bin|feef516b588597109348a07aa75c8d677f1d4a3c
+vendor/lib64/camera/com.qti.tuned.picasso_48m_sunny_front_depth_gc02m1_mono.bin|e3148ea9f9ad6452a7a2f00a4978969a88546d2f
+vendor/lib64/camera/com.qti.tuned.picasso_48m_sunny_rear_depth_gc02m1_mono.bin|3e6426cad5b5dd2ee954ee302dd54713aa241354
+vendor/lib64/camera/com.qti.tuned.picasso_sunny_wide_ov48b2q.bin|b95346168e99aa13374dea6c70add9eef632c6c7
+
 # Camera-arcsoft
 vendor/lib64/libarcsoft_beautyshot.so
 vendor/lib64/libarcsoft_bodyslim.so
